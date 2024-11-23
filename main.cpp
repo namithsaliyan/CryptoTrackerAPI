@@ -250,7 +250,7 @@ public:
     {
         const std::string url = ConfigManager::getInstance().api_base_url + "/exchange/ticker";
         std::string response = curl_wrapper.performRequest(url);
-
+        std::cout << "refreshTickerData" << std::endl;
         if (!response.empty())
         {
             auto ticker_details = parseTickerDetails(response);
