@@ -119,7 +119,7 @@ public:
                 retry_delay_ms = config.value("retry_delay_ms", 1000);
                 log_level = config.value("log_level", "info");
                 port = config.value("port", 8080);
-                host = config.value("host", "localhost");
+                host = config.value("host", "admin.treaz.in");
             }
         }
         catch (const std::exception &e)
