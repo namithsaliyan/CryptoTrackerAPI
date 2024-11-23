@@ -119,7 +119,7 @@ public:
                 retry_delay_ms = config.value("retry_delay_ms", 1000);
                 log_level = config.value("log_level", "info");
                 port = config.value("port", 8080);
-                host = config.value("host", "admin.treaz.in");
+                host = config.value("host", "");
             }
         }
         catch (const std::exception &e)
@@ -250,6 +250,7 @@ public:
     {
         const std::string url = ConfigManager::getInstance().api_base_url + "/exchange/ticker";
         std::string response = curl_wrapper.performRequest(url);
+        std::cout<< response << std::endl;
         std::cout << "refreshTickerData" << std::endl;
         if (!response.empty())
         {
