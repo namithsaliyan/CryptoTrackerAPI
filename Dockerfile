@@ -18,7 +18,7 @@ WORKDIR /app
 COPY . .
 
 # Compile the application
-RUN g++ -std=c++17 -o crypto_tracker.exe main.cpp -lcurl -lcrypt32
+RUN g++ -std=c++17 -o crypto_tracker.exe main.cpp -lcurl 
 
 # Expose a port if your app uses networking
 # EXPOSE 8080 (uncomment and set to your app's port if needed)
